@@ -12,6 +12,8 @@ const AboutFund = () => {
     }
   };
 
+  const aboutFundPath = `${import.meta.env.BASE_URL}about-fund.png`;
+
   return (
     <section
       id="aboutFund"
@@ -24,7 +26,7 @@ const AboutFund = () => {
         <div className="w-full md:w-1/2 h-full mb-12 md:mb-0 relative animate-fade-in-left">
           <div className="relative rounded-2xl overflow-hidden shadow-soft-xl">
             <img
-              src="/about-fund.png"
+              src={aboutFundPath}
               alt="Фонд допомоги"
               className="w-full h-full object-cover"
             />

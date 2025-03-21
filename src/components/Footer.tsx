@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Heart } from "lucide-react";
 
 const Footer = () => {
@@ -27,6 +26,7 @@ const Footer = () => {
     { href: "#partners", label: "Партнери" },
     { href: "#becomePartner", label: "Стати партнером" },
   ];
+  const logoPath = `${import.meta.env.BASE_URL}logo.png`;
 
   return (
     <footer id="footer" className="bg-fund-dark text-white relative">
@@ -36,14 +36,18 @@ const Footer = () => {
           {/* Column 1: Logo and description */}
           <div className="space-y-6">
             <a href="#aboutFund" className="flex items-center">
-              <img src="/logo.png" alt="Логотип" className="h-12 w-auto mr-3 filter brightness-0 invert" />
+              <img
+                src={logoPath}
+                alt="Логотип"
+                className="h-12 w-auto mr-3 filter brightness-0 invert"
+              />
               <span className="text-xl font-display font-semibold">
                 <span className="text-white">Фонд</span>Допомоги
               </span>
             </a>
             <p className="text-white/70">
-              Наша місія — допомогти тим, хто цього потребує. Ми працюємо над тим,
-              щоб кожен міг знайти підтримку та ресурси для кращого життя.
+              Наша місія — допомогти тим, хто цього потребує. Ми працюємо над
+              тим, щоб кожен міг знайти підтримку та ресурси для кращого життя.
             </p>
           </div>
 
@@ -53,8 +57,8 @@ const Footer = () => {
             <ul className="space-y-4">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-white/70 hover:text-white transition-colors"
                   >
                     {item.label}
@@ -70,7 +74,9 @@ const Footer = () => {
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-fund-secondary mr-3 mt-1">{info.icon}</span>
+                  <span className="text-fund-secondary mr-3 mt-1">
+                    {info.icon}
+                  </span>
                   <div>
                     <span className="block text-white/70">{info.label}</span>
                     <span className="block text-white">{info.value}</span>
@@ -82,7 +88,9 @@ const Footer = () => {
 
           {/* Column 4: Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Підпишіться на новини</h3>
+            <h3 className="text-lg font-semibold mb-6">
+              Підпишіться на новини
+            </h3>
             <p className="text-white/70 mb-4">
               Отримуйте інформацію про наші проєкти та ініціативи
             </p>
