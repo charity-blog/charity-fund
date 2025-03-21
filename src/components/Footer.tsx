@@ -25,7 +25,7 @@ const Footer = () => {
     { href: "#howToHelp", label: "Як допомогти" },
     { href: "#reports", label: "Звіти" },
     { href: "#partners", label: "Партнери" },
-    { href: "#becomePartner", label: "Стать партнером" },
+    { href: "#becomePartner", label: "Стати партнером" },
   ];
 
   return (
